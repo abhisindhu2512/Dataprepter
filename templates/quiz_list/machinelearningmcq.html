@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning MCQ Practice | DataPrepster</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f7fafc; }
+    .quiz-card {
+      background: #fff;
+      border-radius: .8rem;
+      box-shadow: 0 4px 24px rgba(45,62,80,0.08);
+      padding: 2rem 2.2rem;
+      max-width: 700px;
+      margin: 40px auto;
+    }
+    .question {
+      margin-bottom: 1.7rem;
+    }
+    .result-message {
+      font-size: 1.15rem;
+      margin-top: 25px;
+      padding: 1rem;
+      border-radius: 7px;
+    }
+    .correct { background: #d1e7dd; color: #0a3622; border: 1px solid #0f5132; }
+    .wrong { background: #f8d7da; color: #842029; border: 1px solid #842029; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">DataPrepster</a>
+    </div>
+  </nav>
+
+  <div class="quiz-card">
+    <h2 class="mb-4 text-primary text-center">Machine Learning MCQ Practice</h2>
+    <form id="mlQuiz">
+      <div class="question">
+        <label class="fw-semibold mb-2">1. Which of the following is a supervised learning algorithm?</label>
+        <div>
+          <input type="radio" name="q1" value="a" id="q1a">
+          <label for="q1a">K-Means Clustering</label><br>
+          <input type="radio" name="q1" value="b" id="q1b">
+          <label for="q1b">Principal Component Analysis (PCA)</label><br>
+          <input type="radio" name="q1" value="c" id="q1c">
+          <label for="q1c">Decision Tree</label><br>
+          <input type="radio" name="q1" value="d" id="q1d">
+          <label for="q1d">Apriori Algorithm</label>
+        </div>
+      </div>
+      <div class="question">
+        <label class="fw-semibold mb-2">2. What is the main goal of unsupervised learning?</label>
+        <div>
+          <input type="radio" name="q2" value="a" id="q2a">
+          <label for="q2a">Label new data based on prior knowledge</label><br>
+          <input type="radio" name="q2" value="b" id="q2b">
+          <label for="q2b">Predict output values</label><br>
+          <input type="radio" name="q2" value="c" id="q2c">
+          <label for="q2c">Find hidden patterns or structure in input data</label><br>
+          <input type="radio" name="q2" value="d" id="q2d">
+          <label for="q2d">Optimize hyperparameters</label>
+        </div>
+      </div>
+      <div class="question">
+        <label class="fw-semibold mb-2">3. Which metric is most appropriate for evaluating a regression model?</label>
+        <div>
+          <input type="radio" name="q3" value="a" id="q3a">
+          <label for="q3a">Accuracy</label><br>
+          <input type="radio" name="q3" value="b" id="q3b">
+          <label for="q3b">Mean Squared Error (MSE)</label><br>
+          <input type="radio" name="q3" value="c" id="q3c">
+          <label for="q3c">F1 score</label><br>
+          <input type="radio" name="q3" value="d" id="q3d">
+          <label for="q3d">Recall</label>
+        </div>
+      </div>
+      <div class="question">
+        <label class="fw-semibold mb-2">4. Which of these can help reduce overfitting in a machine learning model?</label>
+        <div>
+          <input type="radio" name="q4" value="a" id="q4a">
+          <label for="q4a">Increasing the number of model parameters</label><br>
+          <input type="radio" name="q4" value="b" id="q4b">
+          <label for="q4b">Collecting more data</label><br>
+          <input type="radio" name="q4" value="c" id="q4c">
+          <label for="q4c">Using regularization</label><br>
+          <input type="radio" name="q4" value="d" id="q4d">
+          <label for="q4d">Both b and c</label>
+        </div>
+      </div>
+      <div class="question">
+        <label class="fw-semibold mb-2">5. Which library is mainly used for implementing neural networks in Python?</label>
+        <div>
+          <input type="radio" name="q5" value="a" id="q5a">
+          <label for="q5a">Matplotlib</label><br>
+          <input type="radio" name="q5" value="b" id="q5b">
+          <label for="q5b">pandas</label><br>
+          <input type="radio" name="q5" value="c" id="q5c">
+          <label for="q5c">TensorFlow</label><br>
+          <input type="radio" name="q5" value="d" id="q5d">
+          <label for="q5d">scikit-learn</label>
+        </div>
+      </div>
+      <button class="btn btn-success px-4" type="submit">Submit</button>
+    </form>
+    <div id="result" class="result-message mt-4"></div>
+  </div>
+
+  <script>
+    // Answers: q1 - c, q2 - c, q3 - b, q4 - d, q5 - c
+    const correctAnswers = {
+      q1: "c",
+      q2: "c",
+      q3: "b",
+      q4: "d",
+      q5: "c"
+    };
+
+    document.getElementById("mlQuiz").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let total = 5;
+      let score = 0;
+      let unanswered = false;
+
+      Object.keys(correctAnswers).forEach(q => {
+        const val = document.querySelector(`input[name="${q}"]:checked`);
+        if(val && val.value === correctAnswers[q]) score++;
+        if(!val) unanswered = true;
+      });
+
+      const result = document.getElementById("result");
+      if (unanswered) {
+        result.className = "result-message wrong";
+        result.innerHTML = `<b>Please answer all the questions.</b>`;
+        return;
+      }
+      
+      if(score === total){
+        result.className = "result-message correct";
+        result.innerHTML = `🎉 <b>Perfect! You scored ${score}/${total}!</b> Great job!`;
+      } else if (score >= 3) {
+        result.className = "result-message correct";
+        result.innerHTML = `✅ You scored <b>${score}</b> out of <b>${total}</b>. Good work!`;
+      } else {
+        result.className = "result-message wrong";
+        result.innerHTML = `❌ You scored <b>${score}</b> out of <b>${total}</b>. Review the topics and try again!`;
+      }
+    });
+  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

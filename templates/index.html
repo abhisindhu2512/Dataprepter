@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataPrepster - Data Science & ML Interview Prep</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7fafc;
+        }
+        .hero-section {
+            background: linear-gradient(110deg, #0263e0 60%, #66b0f0 100%);
+            color: #fff;
+            padding: 70px 0 40px 0;
+            text-align: center;
+        }
+        .article-card img {
+            height: 160px;
+            object-fit: cover;
+        }
+        .section-title {
+            margin-bottom: 24px;
+            margin-top: 36px;
+        }
+        .practice-card, .tips-card {
+            min-height: 210px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">DataPrepster</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/articles">Articles</a></li>
+                <li class="nav-item"><a class="nav-link" href="/practiceset">Practice Quiz</a></li>
+                <li class="nav-item"><a class="nav-link" href="/interviewquestionset">Interview Question Set</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-section">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Master Data Science & Machine Learning Interviews</h1>
+        <p class="lead mb-4">Resources, practice sets, and real interview tips to help students succeed in job interviews for Data Science & ML roles.</p>
+        <a href="/practiceset" class="btn btn-light btn-lg">Start Practicing</a>
+    </div>
+</header>
+
+<!-- Latest Articles -->
+<section id="articles" class="container">
+    <h2 class="section-title text-primary text-center">Latest Articles</h2>
+    <div class="row g-4">
+        <!-- Article 1 -->
+        <div class="col-md-4">
+            <div class="card article-card shadow-sm h-100">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Article 1">
+                <div class="card-body">
+                    <h5 class="card-title">Understanding Supervised vs Unsupervised Learning</h5>
+                    <p class="card-text">Learn the core differences, use-cases, and examples for both supervised and unsupervised learning in machine learning.</p>
+                    <a href="/differencesupervisedunsupervised" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Article 2 -->
+        <div class="col-md-4">
+            <div class="card article-card shadow-sm h-100">
+                <img src="https://bigdataanalyticsnews.com/wp-content/uploads/2021/04/Feature-Engineering.png" class="card-img-top" alt="Article 2">
+                <div class="card-body">
+                    <h5 class="card-title">A Beginner's Guide to Feature Engineering</h5>
+                    <p class="card-text">Tips and best practices to extract actionable features from raw data for boosting your ML model performance.</p>
+                    <a href="/featureengineering" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Article 3 -->
+        <div class="col-md-4">
+            <div class="card article-card shadow-sm h-100">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Article 3">
+                <div class="card-body">
+                    <h5 class="card-title">Common Data Science Interview Mistakes</h5>
+                    <p class="card-text">What NOT to do in interviews: Avoid these pitfalls and maximize your chances of impressing recruiters.</p>
+                    <a href="/datasciencemistakes" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Practice Sets -->
+<section id="practice" class="container">
+    <h2 class="section-title text-success text-center">Practice Sets</h2>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card practice-card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title mb-3"><i class="bi bi-clipboard-check"></i> Python Coding Challenges</h5>
+                    <p>Sharpen your Python skills with coding challenges tailored for Data Science and ML interviews, from basic to advanced.</p>
+                    <ul>
+                        <li>Data manipulation with NumPy & Pandas</li>
+                        <li>ML model implementation in scikit-learn</li>
+                        <li>Algorithm logic</li>
+                    </ul>
+                    <a href="/pythoncoding" class="btn btn-success btn-sm">Try Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card practice-card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title mb-3"><i class="bi bi-file-bar-graph"></i> Statistics & Probability Sets</h5>
+                    <p>Practice questions covering the statistics and probability concepts most frequently asked in Data roles.</p>
+                    <ul>
+                        <li>Probability distributions</li>
+                        <li>Hypothesis testing</li>
+                        <li>Descriptive statistics</li>
+                        <li>Bayesian reasoning</li>
+                    </ul>
+                    <a href="/statisticquiz" class="btn btn-success btn-sm">Start Quiz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interview Tips -->
+<section id="tips" class="container">
+    <h2 class="section-title text-warning text-center">Interview Tips</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card tips-card shadow-sm h-100 border-warning">
+                <div class="card-body">
+                    <h6 class="card-title mb-2">How to Answer 'Explain a Recent Project?'</h6>
+                    <p class="card-text">Structure and present your project experience to showcase your skills, problem-solving, and impact.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card tips-card shadow-sm h-100 border-warning">
+                <div class="card-body">
+                    <h6 class="card-title mb-2">Soft Skills Matter</h6>
+                    <p class="card-text">Learn how to communicate clearly, handle ambiguous problems, and show your fit for data-driven teams.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center my-4">
+        <a href="/projectTips" class="btn btn-warning btn-lg">See All Interview Tips</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white mt-5">
+    <div class="container py-4 text-center">
+        &copy; 2024 DataPrepster. Empowering your Data Science career.
+    </div>
+</footer>
+
+<!-- Bootstrap JS CDN -->
+<script src="

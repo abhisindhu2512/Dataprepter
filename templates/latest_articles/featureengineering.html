@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's Guide to Feature Engineering | DataPrepster</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f7fafc; }
+        .hero-img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            border-radius: .7rem;
+            margin-bottom: 35px;
+            margin-top: 20px;
+            box-shadow: 0 4px 24px rgba(40,40,40,0.08);
+        }
+        .author-img {
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            object-fit: cover;
+            margin-right: 12px;
+        }
+        .article-meta {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+        }
+        article h2, article h3 { margin-top: 2rem; font-weight: 600;}
+        article p { margin-bottom: 1.3rem; line-height: 1.7;}
+        .article-card {
+            background: #fff;
+            border-radius: .9rem;
+            box-shadow: 0 4px 24px rgba(45,62,80,0.10);
+            padding: 2.3rem 2rem;
+            margin-top: -70px;
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .table thead {
+            background:#f0f0f4;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">DataPrepster</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Articles</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Practice Sets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Interview Tips</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- /Navbar -->
+
+<!-- Hero image -->
+<div class="container">
+    <img src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?auto=format&fit=crop&w=1050&q=80"
+         alt="Feature Engineering Concept"
+         class="hero-img">
+</div>
+
+<!-- Article body -->
+<section class="article-card mb-5 mt-0 shadow-lg">
+    <!-- Article Header -->
+    <header>
+        <h1 class="mb-2">Beginner's Guide to Feature Engineering</h1>
+        <div class="article-meta">
+            <img src="https://images.playground.com/62baa7f4ad824de3998899e7bd3ad7f7.jpeg" alt="Author: Abhishek Suman" class="author-img">
+            <span>By <strong>Abhishek Suman</strong> &middot; May 10, 2025</span>
+        </div>
+    </header>
+    <!-- Main Article Content -->
+    <article>
+        <p>
+            <strong>Feature engineering</strong> is a foundational skill in data science and machine learning. It’s the process of transforming raw data into informative features that improve a model’s predictive power. The quality of your features can often have a bigger impact than the choice of algorithm!
+        </p>
+
+        <h2>Why is Feature Engineering Important?</h2>
+        <p>
+            Machine learning algorithms learn from data — but not all data is immediately useful. Well-crafted features highlight patterns, encode information, and make data more accessible to models. Poor features, on the other hand, can limit performance or even mislead your models.
+        </p>
+
+        <h2>Common Types of Feature Engineering</h2>
+        <ul>
+            <li><strong>Missing Value Imputation:</strong> Handling or filling missing data (e.g., mean, median, mode imputation).</li>
+            <li><strong>Encoding Categorical Variables:</strong> Turning text labels into numeric representations (e.g., one-hot encoding, label encoding).</li>
+            <li><strong>Feature Scaling:</strong> Bringing features to a similar scale (e.g., normalization, standardization).</li>
+            <li><strong>Feature Creation:</strong> Generating new features from existing data, such as extracting dates, aggregating values, or combining features.</li>
+            <li><strong>Transformation:</strong> Applying mathematical or domain-specific transformations (e.g., log-transformation, polynomial features).</li>
+        </ul>
+
+        <h2>Steps in Feature Engineering</h2>
+        <ol>
+            <li><strong>Understand the Data:</strong> Explore data types, distributions, and relationships.</li>
+            <li><strong>Clean and Prepare:</strong> Remove duplicates, handle outliers, and impute missing values.</li>
+            <li><strong>Transform and Encode:</strong> Adjust features for model compatibility (e.g., encoding, scaling).</li>
+            <li><strong>Create New Features:</strong> Use insights, domain knowledge, or data relationships to generate novel features.</li>
+            <li><strong>Select the Best Features:</strong> Use statistical methods or model-based approaches to select the most relevant ones.</li>
+        </ol>
+
+        <h2>Practical Examples</h2>
+        <ul>
+            <li>
+                <strong>Date/Time Features:</strong> From a timestamp, create new features such as <code>hour</code>, <code>day_of_week</code>, or <code>month</code> to help models detect patterns by time.
+            </li>
+            <li>
+                <strong>Text Features:</strong> Convert text data into features like word counts, TF-IDF, or topic scores for models to consume.
+            </li>
+            <li>
+                <strong>Aggregation:</strong> For transaction data, calculate the <em>total</em> or <em>average</em> transactions per user/customer.
+            </li>
+        </ul>
+
+        <h2>Best Practices</h2>
+        <ul>
+            <li>Start with EDA (Exploratory Data Analysis) to identify which features might be useful.</li>
+            <li>Keep features interpretable when possible.</li>
+            <li>Avoid data leakage (do not use information from the future or target variable).</li>
+            <li>Automate using pipelines (e.g., <code>scikit-learn</code> <code>Pipeline</code> or <code>ColumnTransformer</code>).</li>
+            <li>Experiment and iterate: the best features often come from domain intuition and creativity!</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>
+            Feature engineering is both an art and a science — mastering it can turn a good model into a great one. For beginners, start simple: clean your data, create new features that make sense, and always test if they improve your results.
+        </p>
+        <p>
+            <strong>Ready to practice?</strong> Try experimenting with real-world datasets on sites like <a href="https://www.kaggle.com/datasets" target="_blank">Kaggle</a> and observe firsthand how better features can boost your models.
+        </p>
+    </article>
+    <hr>
+    <div class="text-secondary small">
+        © 2024 DataPrepster &middot;
+        <a href="your-articles-list-page.html" class="link-primary">Back to Articles</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white mt-5">
+    <div class="container py-4 text-center">
+        &copy; 2024 DataPrepster. Explore. Learn. Succeed.
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Generative AI Interview Q&A</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body { background: #f6fafc;}
+    .question-card { margin-bottom: 24px;}
+    .question-label { font-weight: bold; }
+    .answer-label { font-weight: bold; color: #21568b; margin-top: 10px; }
+    .answer-list { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+<main class="container my-5">
+  <h2 class="mb-5 text-center text-primary">Generative AI Developer Interview Question Set</h2>
+
+  <!-- Question 1 -->
+  <div class="card question-card">
+    <div class="card-body">
+      <div class="question-label">Q1: What is Generative AI?</div>
+      <div class="answer-label">Answer:</div>
+      <ul class="answer-list">
+        <li>Generative AI refers to artificial intelligence techniques that can create new content, such as images, text, music, or code, often mimicking human creativity.</li>
+        <li>These models learn the patterns and structure of the data and generate similar new data.</li>
+        <li><strong>Examples:</strong> GPT (language generation), DALL-E (image synthesis).</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Question 2 -->
+  <div class="card question-card">
+    <div class="card-body">
+      <div class="question-label">Q2: What are the top applications of Generative AI?</div>
+      <div class="answer-label">Answer:</div>
+      <ul class="answer-list">
+        <li><strong>Natural Language Processing (NLP):</strong> Used for text generation, language translation, and conversational AI like chatbots.</li>
+        <li><strong>Content Generation:</strong> Auto-generates articles, stories, poetry, and marketing copy for content creators.</li>
+        <li><strong>Image & Video Synthesis:</strong> Generates images (DALL-E, Stable Diffusion), edits photos, and creates deepfakes.</li>
+        <li><strong>Code Generation:</strong> Assists in writing software code (e.g., GitHub Copilot, ChatGPT Code Interpreter).</li>
+        <li><strong>Drug Discovery & Design:</strong> Designs novel molecules and proteins using generative chemistry models.</li>
+        <li><strong>Art & Music:</strong> Composes music, creates arts, and generates designs.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="card question-card">
+    <div class="card-body">
+      <div class="question-label">Q3: How does a Generative Adversarial Network (GAN) work?</div>
+      <div class="answer-label">Answer:</div>
+      <ul class="answer-list">
+        <li>A GAN consists of two neural networks: a generator and a discriminator.</li>
+        <li>The generator creates fake data (e.g., images) trying to look like real data.</li>
+        <li>The discriminator evaluates data and classifies it as real or fake.</li>
+        <li>They are trained together: the generator tries to fool the discriminator, and the discriminator tries not to be fooled.</li>
+        <li>Through this process, the generator improves until the fake data is indistinguishable from real data.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Question 4 -->
+  <div class="card question-card">
+    <div class="card-body">
+      <div class="question-label">Q4: What is the Transformer architecture and why is it important for Generative AI?</div>
+      <div class="answer-label">Answer:</div>
+      <ul class="answer-list">
+        <li>The Transformer is a deep learning model architecture based on self-attention mechanisms.</li>
+        <li>It enables efficient parallel training and can model long-range dependencies better than RNNs.</li>
+        <li>The Transformer is the foundational architecture for state-of-the-art language models (like GPT, BERT, T5).</li>
+        <li>It powers the most advanced text generation, translation, and understanding systems today.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Question 5 -->
+  <div class="card question-card">
+    <div class="card-body">
+      <div class="question-label">Q5: Mention key ethical concerns of Generative AI.</div>
+      <div class="answer-label">Answer:</div>
+      <ul class="answer-list">
+        <li><strong>Misinformation:</strong> Generating realistic fake news, deepfakes, or forged images.</li>
+        <li><strong>Bias & Fairness:</strong> Reinforcing or amplifying biases present in training data.</li>
+        <li><strong>Copyright Infringement:</strong> Creating content that unintentionally copies original works.</li>
+        <li><strong>Privacy:</strong> Revealing sensitive or private information from training data.</li>
+        <li><strong>Malicious Use:</strong> Generating phishing emails, malware, or explicit content.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Question 6 -->
+  <div class="card question-card">
+    <div class="card-body">
+      <div class="question-label">Q6: What metrics are used to evaluate the performance of a text-generating model?</div>
+      <div class="answer-label">Answer:</div>
+      <ul class="answer-list">
+        <li><strong>BLEU, ROUGE, METEOR:</strong> Compare similarity of generated text to reference text (often for translation or summarization).</li>
+        <li><strong>Perplexity:</strong> Measures how well a model predicts a sample (lower is better).</li>
+        <li><strong>BERTScore:</strong> Measures semantic similarity between generated and reference texts.</li>
+        <li><strong>Human Evaluation:</strong> For fluency, coherence, creativity, factual accuracy, and relevance.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Question 7 -->
+  <div class="card question-card">
+    <div class="card-body">
+      <div class="question-label">Q7: What is Diffusion Modeling in the context of Generative AI?</div>
+      <div class="answer-label">Answer:</div>
+      <ul class="answer-list">
+        <li>Diffusion models are generative models that start with random noise and gradually denoise it to produce a desired output (like an image).</li>
+        <li>The model learns to reverse the process of adding noise, step-by-step, to synthesize realistic data.</li>
+        <li>State-of-the-art image generators (e.g., Stable Diffusion, Denoising Diffusion Probabilistic Models) use this approach for high-quality image synthesis.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+</body>
+</html>
